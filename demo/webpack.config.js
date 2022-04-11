@@ -29,7 +29,7 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               sassOptions: {
-                outputStyle: PROD ? 'compressed' : 'expanded',
+                style: PROD ? 'compressed' : 'expanded',
               },
             },
           },
