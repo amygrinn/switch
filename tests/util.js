@@ -71,14 +71,18 @@ const assertVisibility = async (test, hidden) => {
   assert.strictEqual(styles.display === 'none', hidden);
 };
 
-const assertHidden = (...ts) => async () => {
-  const tests = [].concat(ts);
-  for (const test of tests) await assertVisibility(test, true);
-};
+const assertHidden =
+  (...ts) =>
+  async () => {
+    const tests = [].concat(ts);
+    for (const test of tests) await assertVisibility(test, true);
+  };
 
-const assertVisible = (...ts) => async () => {
-  const tests = [].concat(ts);
-  for (const test of tests) await assertVisibility(test, false);
-};
+const assertVisible =
+  (...ts) =>
+  async () => {
+    const tests = [].concat(ts);
+    for (const test of tests) await assertVisibility(test, false);
+  };
 
 module.exports = { writeTestCase, serve, assertHidden, assertVisible };

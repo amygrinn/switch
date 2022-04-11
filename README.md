@@ -28,18 +28,13 @@ import React from 'react';
 import useSwitch from '@tygr/switch';
 
 export default function Auth() {
-  const [
-    switchContainer,
-    setState,
-    LOGIN,
-    REGISTER,
-    RESET_PASSWORD,
-  ] = useSwitch(
-    { name: 'auth', initialIndex: 2 },
-    'login',
-    'register',
-    'reset-password'
-  );
+  const [switchContainer, setState, LOGIN, REGISTER, RESET_PASSWORD] =
+    useSwitch(
+      { name: 'auth', initialIndex: 2 },
+      'login',
+      'register',
+      'reset-password'
+    );
 
   return (
     <div {...switchContainer} className="tygr-auth">

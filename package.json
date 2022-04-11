@@ -2,89 +2,45 @@
   "name": "@tygr/switch",
   "version": "1.2.2",
   "description": "Tab hook and sass mixin",
-  "main": "index.js",
-  "types": "index.ts",
-  "files": [
-    "index.ts",
-    "index.js",
-    "_index.scss",
-    "_util.scss"
-  ],
-  "browserslist": [
-    "defaults"
-  ],
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react",
-      "@babel/preset-typescript"
-    ],
-    "plugins": [
-      "@babel/plugin-transform-runtime"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "alloy",
-      "alloy/react",
-      "alloy/typescript"
-    ],
-    "env": {
-      "browser": true,
-      "mocha": true
-    },
-    "settings": {
-      "react": {
-        "version": "detect"
-      }
-    },
-    "rules": {
-      "eol-last": [
-        "error",
-        "always"
-      ]
-    },
-    "ignorePatterns": [
-      "/lib",
-      "/dist",
-      "webpack.config.js"
-    ]
-  },
-  "prettier": {
-    "singleQuote": true
-  },
-  "scripts": {
-    "test": "mocha tests/**/*.spec.js --exit",
-    "test:w": "npm run test -- -w",
-    "clean": "rimraf index.js dist",
-    "ts": "tsc",
-    "ts:w": "npm run ts -- -w",
-    "demo": "webpack --config demo/webpack.config",
-    "demo:w": "webpack-dev-server --config demo/webpack.config",
-    "build": "npm-run-all clean -p ts demo",
-    "serve": "http-server",
-    "start": "npm-run-all ts -p ts:w demo:w",
-    "lint:check": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "lint": "npm run lint:fix",
-    "prettier:check": "prettier -c .",
-    "prettier:fix": "prettier --write .",
-    "prettier": "npm run prettier:fix",
-    "quality:check": "run-s --print-label --silent lint:check prettier:check",
-    "quality:fix": "run-p --print-label --silent lint:fix prettier:fix",
-    "quality": "npm run quality:fix"
-  },
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/tylergrinn/tygr-switch.git"
   },
+  "author": "Tyler Grinn",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm-run-all clean -p ts demo",
+    "clean": "rimraf index.js dist",
+    "demo": "webpack --config demo/webpack.config",
+    "demo:w": "webpack-dev-server --config demo/webpack.config",
+    "lint": "npm run lint:fix",
+    "lint:check": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "prettier": "npm run prettier:fix",
+    "prettier:check": "prettier -c .",
+    "prettier:fix": "prettier --write .",
+    "quality": "npm run quality:fix",
+    "quality:check": "run-s --print-label --silent lint:check prettier:check",
+    "quality:fix": "run-p --print-label --silent lint:fix prettier:fix",
+    "serve": "http-server",
+    "start": "npm-run-all ts -p ts:w demo:w",
+    "test": "mocha tests/**/*.spec.js --exit",
+    "test:w": "npm run test -- -w",
+    "ts": "tsc",
+    "ts:w": "npm run ts -- -w"
+  },
+  "files": [
+    "_index.scss",
+    "_util.scss",
+    "index.js",
+    "index.ts"
+  ],
   "keywords": [
     "react",
     "login",
     "webpack"
   ],
-  "author": "Tyler Grinn",
-  "license": "ISC",
   "peerDependencies": {
     "react": "^18"
   },
@@ -127,5 +83,49 @@
     "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.8.1"
+  },
+  "types": "index.ts",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react",
+      "@babel/preset-typescript"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-runtime"
+    ]
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "alloy",
+      "alloy/react",
+      "alloy/typescript"
+    ],
+    "env": {
+      "browser": true,
+      "mocha": true
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "rules": {
+      "eol-last": [
+        "error",
+        "always"
+      ]
+    },
+    "ignorePatterns": [
+      "/lib",
+      "/dist",
+      "webpack.config.js"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }
