@@ -3,10 +3,6 @@ dist: xenial
 language: node_js
 node_js: lts/*
 
-# SSH Setup
-addons:
-  ssh_known_hosts: tygr.info
-
 script:
   - npm run quality:check
   - npm run test
@@ -17,15 +13,15 @@ deploy:
     on:
       branch: main
       tags: true
-      repo: tylergrinn/tygr-switch
+      repo: taylorgrinn/switch
     edge: true
-    email: tylergrinn@gmail.com
+    email: grinntaylor@gmail.com
     api_token: $NPM_TOKEN
 
   - provider: pages
     on:
       branch: main
-      repo: tylergrinn/tygr-switch
+      repo: taylorgrinn/switch
     edge: true
     github_token: $GITHUB_TOKEN
     local_dir: dist

@@ -11,7 +11,7 @@ export default function Login() {
 
   return (
     <form
-      className="tygr-login"
+      className="tay-login"
       {...authContainer}
       onSubmit={(ev) => ev.preventDefault()}
     >
