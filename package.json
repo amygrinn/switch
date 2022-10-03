@@ -120,6 +120,7 @@
       ]
     },
     "ignorePatterns": [
+      "/index.js",
       "/lib",
       "/dist",
       "webpack.config.js"
