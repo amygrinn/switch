@@ -14,14 +14,14 @@ deploy:
       branch: main
       tags: true
       repo: taylorgrinn/switch
-    edge: true
     email: grinntaylor@gmail.com
-    api_token: $NPM_TOKEN
+    api_key:
+      secure: 'HG1Jwl3QLfBWW53AURnL/IWpyj1iCeavlw4unFi/AJOKyIYwcREQcRDfC1cVNAHX75UYNDJy87gSFB9i0syfGdLzuj9PlZOX/ydAZ2z6/b6Q5pTWiz44ktcVLRrZENTeCOiwh3rQPQZ84ro0NTuBHdYsLAyXMQTN2SpB1oqfBj4hKxLhw8+VjxS6y2ycZ6GqKBs9IgsHHwGmjGk6fCertvlPyl4Cjsc+NgJmEP2fOm5g+MPlGovljFKbymV3cm/y252S1DgzkLjGWFFXEnDHqzcKPat/evcMlKJy0x4kKrysSFctYM/C8GwwuaWVPFfslePnz+kt9nJvsiSOk2V9pc/IvdVkePZWw212MuVniA93aJkoyQ+9biqDqZY5f3CcHWj7mLuFRPmZd3Qd4dQV55QqYi+xsO8DEFBCJL6AKVaHgmqHNwlKBxTiCbPFCzi+FQr35Pgsp0I53AQmebES6ZZxx5ixYwdktUHyL1qYcA7WQRkW9aiptgHBcRWWtwi7FQoYFIm7Hegrgp8M/2aRxNXyGrMnrrA8PhX29xoN4idOu4GHpN9m75XXSQBEojV9Uk8m8BztWOdskQK+Q64ODh17QGtTaqLeGcfEbNVglo32JtGF8niGKToB1qCPyVaK5eORo4r7wMD9Osq10yrbeRTLD1ygUDg6KYJvCCWRnPk='
 
   - provider: pages
     on:
       branch: main
       repo: taylorgrinn/switch
-    edge: true
     github_token: $GITHUB_TOKEN
     local_dir: dist
+    skip_cleanup: true
