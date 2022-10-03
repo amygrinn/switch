@@ -1,13 +1,13 @@
 {
   "name": "@taylorgrinn/switch",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Switch hook and sass mixin",
   "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/taylorgrinn/switch.git"
   },
-  "author": "Tyler Grinn",
+  "author": "Taylor Grinn",
   "main": "index.js",
   "scripts": {
     "build": "npm-run-all clean -p ts demo",
